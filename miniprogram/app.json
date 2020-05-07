@@ -1,0 +1,20 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/bookSucceed/bookSucceed",
+    "pages/addressChoose/addressChoose",
+    "pages/bookOrder/bookOrder",
+    "pages/choices/choices",
+    "pages/phoneModels/phoneModels",
+    "pages/search/search",
+    "pages/addAddress/addAddress"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "R&L 手机回收",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "R&L 手机回收",
+  "usingComponents": {
+    "i-icon": "../../dist/icon/index"
+  }
+}

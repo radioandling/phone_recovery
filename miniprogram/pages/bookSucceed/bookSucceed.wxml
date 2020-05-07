@@ -1,0 +1,25 @@
+<view class="container">
+  <view class="top">
+    <view class="top-icon">
+      <i-icon type="right" size="80" color="#ed3f14"/>
+    </view>
+    <view class="top-success">你的订单已经提交成功</view>
+    <view class="top-contact">客服会尽快和您联系</view>
+    <view class="button-box">
+      <button class="button-item" bindtap="on_back_to_home">返回首页</button>
+      <button class="red-button button-item">查看详情</button>
+    </view>
+  </view>
+  <view class="middle">
+    <view class="middle-box">
+      为保障您的隐私安全，强烈建议您在回收前进行数据备份，将手机通讯录、照片、录像、软件等有关个人隐私的信息一律清除，并恢复出厂设置。
+    </view>
+  </view>
+  <view class="bottom">
+    <view class="bottom-box">
+      <text>客服热线：9533886</text>
+      <text>服务时间：9:00-20:00(周一到周日)</text>
+      <text class="bottom-box-detail">查看详细服务时间说明</text>
+    </view>
+  </view>
+</view>

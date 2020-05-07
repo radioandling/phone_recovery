@@ -1,0 +1,29 @@
+<view class="container">
+	<view class="top">
+		<view class="top-search">
+			<i-icon type="search" size="20" color="#80848f" />
+			<input class="top-search-input" placeholder="请输入机型型号" placeholder-class="input-placeholder"></input>
+			<i-icon type="delete_fill" size="20" color="#80848f" />
+		</view>
+		<view class="tab">
+			<i-tabs class="title-text" current="{{ current }}" bindchange="on_choose_type" color="#000">
+				<i-tab key="phone" title="手机"></i-tab>
+				<i-tab key="pad" title="平板"></i-tab>
+				<i-tab key="book" title="笔记本"></i-tab>
+			</i-tabs>
+		</view>
+	</view>
+	<view class="body">
+		<scroll-view class="body-left conten-text" scroll-y="true">
+			<view wx:for="{{choosed_type.brands}}" wx:key="this" class="body-left-item {{item.isActive ? 'left-active' : ''}}" bindtap="on_choose_brand" data-leftIndex="{{index}}">
+				{{item.brand_name}}
+			</view>
+		</scroll-view>
+		<scroll-view class="body-right content-text" scroll-y="true">
+			<view class="body-right-item" wx:for="{{choosed_brand.models}}" wx:key="index" bindtap="on_to_choices" data-model="{{item.model_name}}">
+				<text>{{index + 1}}</text>
+				<text>{{item.model_name}}</text>
+			</view>
+		</scroll-view>
+	</view>
+</view>

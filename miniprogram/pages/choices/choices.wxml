@@ -1,0 +1,45 @@
+<view class="wrapper">
+	<view class="wrapper-content-notice sub-text">
+		<i-icon type="prompt_fill" size="20" />
+		请按照您机型的真实情况选择，收款时效性会提高很多
+	</view>
+	<form bindsubmit="on_submit">
+		<!-- 选项区域 -->
+		<view class="wrapper-content">
+			<block wx:for="{{states}}" wx:key="index" wx:for-item="i">
+				<!-- 判断是单选还是多选 -->
+				<view class="wrapper-content-item item-{{index}}" wx:if="{{i.type==='single'}}" hidden="{{!i.isShow}}">
+					<view class="item-title">
+						<text>{{index + 1}}. </text>
+						<text>{{i.title}}</text>
+					</view>
+					<view class="item-box">
+						<radio-group class="choices-group" name="{{i.title}}" bindchange="on_choose_state_item" data-index="{{index}}">
+							<block wx:for="{{i.choices}}" wx:key="this" wx:for-item="j">
+								<radio value="{{j.state + ':' + j.grade}}"><text>{{j.state}}</text></radio>
+							</block>
+						</radio-group>
+					</view>
+				</view>
+				<!-- 判断是单选还是多选 -->
+				<view class="wrapper-content-item item-{{index}}" wx:if="{{i.type==='multiple'}}" hidden="{{!i.isShow}}">
+					<view class="item-title">
+						<text>{{index + 1}}. </text>
+						<text>{{i.title}}</text>
+					</view>
+					<view class="item-box">
+						<checkbox-group class="choices-group" name="{{i.title}}" bindchange="on_choose_state_item" data-index="{{index}}">
+							<block wx:for="{{i.choices}}" wx:key="this" wx:for-item="j">
+								<checkbox value="{{j.state + ':' + j.grade}}"><text>{{j.state}}</text></checkbox>
+							</block>
+						</checkbox-group>
+					</view>
+				</view>
+			</block>
+		</view>
+		<!-- 底部的按钮区域 -->
+		<view class="btn-box">
+			<button class="bottom-button" disabled="{{is_all_choosed}}" formType="submit">立即查看定价</button>
+		</view>
+	</form>
+</view>

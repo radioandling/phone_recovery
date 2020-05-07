@@ -1,0 +1,39 @@
+<view class="container">
+	<form class="form-wrapper" bindsubmit="on_save_user_info">
+		<view class="form-wrapper-top">
+			<view class="top-item">
+        <view class="top-item-title">所在区域</view>
+				<picker mode="region" name="user_region" value="{{user_region}}" bindchange="on_choose_region">
+					<view class="top-item-content" wx:if="{{!show_region}}">
+						省份、 城市、 区县
+					</view>
+          <view class="top-item-content" wx:else>
+            {{user_region[0]}} {{user_region[1]}} {{user_region[2]}}
+          </view>
+				</picker>
+			</view>
+			<view class="top-item detail">
+        <view class="top-item-title">详细地址</view>
+        <textarea placeholder="请输入详细地址" placeholder-class="top-item-content" auto-focus="true" name="user_detail_address" bindblur ="on_add_detail" value="{{user_detail_address}}"></textarea>
+      </view>
+			<view class="top-item">
+        <view class="top-item-title">联系人</view>
+        <input placeholder="请输入联系人姓名" placeholder-class="top-item-content" name="user_name" bindblur="on_add_name" value="{{user_name}}" class="top-item-content"></input>
+      </view>
+			<view class="top-item">
+        <view class="top-item-title">联系电话</view>
+        <input placeholder="请输入联系人电话" placeholder-class="top-item-content" name="user_phone" bindblur="on_test_phone" value="{{user_phone}}" class="top-item-content"></input>
+      </view>
+		</view>
+		<view class="form-wrapper-bottom">
+      <switch type="checkbox" bindchange="on_set_default" name="user_default" checked="{{user_default}}"/>
+      设为默认地址
+    </view>
+		<view class="form-wrapper-deletebtn" wx:if="{{show_delete_btn}}" bindtap="on_delete_address_item">
+			<view>删除该收货地址</view>
+		</view>
+		<view class="btn-box">
+			<button class="bottom-button" formType="submit">保存</button>
+		</view>
+	</form>
+</view>

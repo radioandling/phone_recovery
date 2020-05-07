@@ -1,0 +1,67 @@
+<view class="container">
+  <!-- 头部部分 -->
+	<view class="top">
+		<view class="top-wrapper">
+			<view class="top-wrapper-search content-text">
+				<input placeholder="搜一下你想回收的机器" placeholder-class="searh-placeholder" bindfocus="on_to_search"></input>
+				<text>本机免费评估</text>
+			</view>
+			<view class="top-wrapper-img">
+				<image src="cloud://wx-cloud-2zjv7.7778-wx-cloud-2zjv7-1259562575/pr_photos/swiper2.jpeg"></image>
+			</view>
+			<view class="top-wrapper-services content-text">
+				<block wx:for="{{top_icons}}" wx:key="url">
+					<view 
+						class="services-item-box" 
+						data-type="{{item.type}}"
+						bindtap="on_to_phoneModels"
+					>
+						<image src="{{item.url}}" mode="aspectFit"></image>
+						<text>{{item.text}}</text>
+					</view>
+				</block>
+			</view>
+		</view>
+	</view>
+  <!-- 中间部分 -->
+	<view class="middle">
+		<view class="middle-wrapper">
+			<view class="middle-wrapp-notice">
+				<i-icon type="systemprompt_fill" size="20" color="#e64340" />
+				radio在 9 分钟前回收了一台iphone11
+			</view>
+			<view class="middle-wrapper-scroll">
+				<view class="scroll-title titlt-text">热门机型回收</view>
+				<scroll-view class="scroll-box" scroll-x="true">
+				<block wx:for="{{swiper_data}}" wx:key="_id">
+					<view class="scroll-view-item" bindtap="on_to_choices">
+						<view class="view-item-box">
+							<image class="item-box-img" src="{{item.img_url}}"></image>
+							<view class="item-box-model">{{item.model_name}}</view>
+							<view class="item-box-price">最高回收<text>￥{{item.original_price}}</text></view>
+							<view class="item-box-btn">立刻回收</view>
+						</view>
+					</view>
+				</block>	
+				</scroll-view>
+			</view>
+		</view>
+	</view>
+  <!-- 底部部分 -->
+	<view class="bottom">
+		<view class="bottom-wrapper">
+      <view class="bottom-wrapper-types content-text">
+        <block wx:for="{{bottom_icons}}" wx:key="url">
+          <view class="services-item-box">
+            <image src="{{item.url}}" mode="aspectFit"></image>
+            <text>{{item.text}}</text>
+          </view>
+        </block>
+      </view>
+      <view class="bottom-wrapper-call">
+        <view class="call-number content-text">客服电话 9533886</view>
+        <view class="call-time sub-text">服务时间：9:00-20:00(周一到周日)</view>
+      </view>
+    </view>
+	</view>
+</view>

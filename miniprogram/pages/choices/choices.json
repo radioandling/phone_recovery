@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "机型数据选择",
+  "usingComponents": {
+    "i-icon": "../../dist/icon/index",
+    "bottom-button": "../../components/bottomButton/bottomButton"
+  }
+}

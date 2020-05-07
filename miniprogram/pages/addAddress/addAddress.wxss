@@ -1,0 +1,57 @@
+.form-wrapper-top{
+  height: 550rpx;
+  padding: 0 30rpx;
+  box-sizing: border-box;
+  background-color: #fff;
+}
+.top-item{
+  height: 100rpx;
+  line-height: 100rpx;
+  border-bottom: 1px solid #d1d2d6;
+  display: flex;
+  flex-direction: row;
+}
+.top-item-title{
+  width: 160rpx;
+  font-size: 14px;
+  margin-right: 10rpx;
+  font-weight: 400;
+}
+.top-item-content{
+  font-size: 14px;
+  color: #80848f;
+}
+.top-item.detail{
+  height: 200rpx;
+}
+textarea{
+  height: 200rpx;
+  padding: 20rpx 20rpx;
+  box-sizing: border-box;
+  font-size: 14px;
+  color: #80848f;
+}
+input{
+  height: 100rpx;
+  line-height: 100rpx;
+}
+.form-wrapper-bottom{
+  height: 80rpx;
+  line-height: 80rpx;
+  margin-top: 20rpx;
+  padding:0 30rpx;
+  background-color: #fff;
+  font-size: 14px;
+}
+switch{
+  transform: scale(.9);
+}
+.form-wrapper-deletebtn{
+  height: 80rpx;
+  line-height: 80rpx;
+  margin-top: 20rpx;
+  padding:0 30rpx;
+  background-color: #fff;
+  font-size: 14px;
+  color: #e64340;
+}

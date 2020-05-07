@@ -1,0 +1,32 @@
+<view class="container">
+  <view class="wrapper">
+    <view class="search">
+      <view class="search-left">
+        <i-icon type="search" size="20" color="#80848f"/>
+        <input
+          placeholder="请输入机型型号"
+          placeholder-class="search-placeholder"
+          bindinput="on_search_models"
+          value="{{search_input}}"
+        >
+        </input>
+      </view>
+      <view class="search-right">
+        <i-icon type="delete_fill" size="20" color="#80848f" bindtap="on_clear_input"/>
+      </view>
+    </view>
+    <view class="result content-text" hidden="{{result_list.length < 0}}">
+      <block wx:for="{{result_list}}" wx:key="index">
+        <view class="result-item" bindtap="on_to_choices" data-model="{{item}}">{{item}}</view>
+      </block>
+    </view>
+    <view class="hot">
+      <view class="hot-title title-text">热门机型</view>
+      <view class="hot-box">
+        <block  wx:for="{{hot_list}}" wx:key="*this">
+          <view class="hot-box-item">{{item}}</view>
+        </block>
+      </view>
+    </view>
+  </view>
+</view>

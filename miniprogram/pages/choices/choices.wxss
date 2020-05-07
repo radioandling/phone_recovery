@@ -1,0 +1,66 @@
+.wrapper{
+  height: 8000rpx;
+  padding-bottom: 120rpx;
+  box-sizing: border-box;
+  background-color: #eeeef1;
+}
+::-webkit-scrollbar {
+  /* 去掉滚动条 */
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+.wrapper-content{
+  width: 90%;
+  margin: 0 auto;
+}
+.wrapper-content-notice{
+  height: 60rpx;
+  line-height: 60rpx;
+  background-color: #faf4f4;
+  border-radius: 5rpx;
+  font-size: 10px;
+  color: #e64340;
+  text-align: center;
+}
+.wrapper-content-item{
+  margin-top: 80rpx;
+}
+.item-title{
+  font-size: 10px;
+  color: #84808f;
+  font-weight: 300;
+}
+.item-box{
+  font-size: 12px;
+  font-weight: 350;
+  color: #495060;
+}
+.choices-group{
+  margin-top: 20rpx;
+  background-color: #fff;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10rpx;
+}
+.choices-group > radio {
+  height: 120rpx;
+  line-height: 120rpx;
+  box-sizing: border-box;
+  display: block;
+  border-bottom: 1px solid #e9eaec;
+  transform: scale(0.9);
+}
+.choices-group > checkbox {
+  height: 120rpx;
+  line-height: 120rpx;
+  box-sizing: border-box;
+  display: block;
+  border-bottom: 1px solid #e9eaec;
+  transform: scale(0.9);
+}
+.choices-group radio:last-child {
+  border-bottom: none;
+}
+.choices-group checkbox:last-child {
+  border-bottom: none;
+}

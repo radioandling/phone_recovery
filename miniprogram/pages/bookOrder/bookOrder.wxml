@@ -1,0 +1,68 @@
+<view class="container">
+	<view class="scroll-box">
+		<form class="wrapper" bindsubmit="on_submit_user_info">
+			<view class="info">
+				<view class="info-box">
+					<image class="info-box-image" src="{{img_url}}" mode="aspectFit"></image>
+					<view class="info-box-intro">
+						<view class="intro-title title-text">{{model_name}}</view>
+						<view class="intro-price">￥ <text class="price-tag">{{final_price}}</text></view>
+						<view class="intro-forecast">
+							<i-icon type="dynamic" size="12" color="#80848f" />
+							预计下月跌幅：<text>{{decrease_price}}</text>
+						</view>
+					</view>
+					<view class="info-box-cheaper">
+						<view class="cheaper-btn">使用增值券</view>
+					</view>
+				</view>
+				<view class="info-box-detail">
+					<text class="content-text">我的评估项</text>
+					<i-icon type="{{show_choices ? 'unfold' : 'enter'}}" size="20" color="#80848f" bindtap="on_show_icon" />
+				</view>
+				<view class="info-box-choices" hidden="{{show_choices}}">
+					<block wx:for="{{choices_array}}" wx:key="*this">
+						<view class="choices-item">{{index + 1}}. {{item}}</view>
+					</block>
+				</view>
+			</view>
+			<view class="address" bindtap="on_to_add_address">
+				<view class="address-add" wx:if="{{!show_detail_address}}">
+					<i-icon type="coordinates" size="20" />
+					添加服务地址
+				</view>
+				<view class="address-show" wx:else>
+					<view>{{user_info.user_name}}</view>
+					<view>{{user_info.user_phone}}</view>
+					<view>
+						<text>{{user_info.user_region[0] + user_info.user_region[1] + user_info.user_region[2]}}</text>
+						<text>{{user_info.user_detail_address}}</text>
+					</view>
+				</view>
+			</view>
+			<view class="methods">
+				<view class="methods-title title-text">回收方式</view>
+				<view class="methods-box-wrapper">
+					<view class="methods-box">
+						<i-icon type="tasklist_fill" color="#e64340" size="30" />
+						<text>邮寄回收(顺丰包邮)</text>
+					</view>
+				</view>
+			</view>
+			<view class="idcard">
+				<i-icon type="businesscard" size="28" color="#80848f" />
+				<input placeholder="请输入身份证号码" placeholder-class="sub-text" bindblur="on_test_idcard" value="{{idcard_number}}" name="idcard" type="idcard"></input>
+			</view>
+			<view class="protocol">
+				<view class="protocol-box">
+					<switch id="protocol" type="checkbox" bindchange="on_agreed_protocol" name="agreed" />
+					<label for="protocol">我已经阅读并同意<text>《丰修服务协议》</text>, 并确认已解锁iCloud账号/安卓云账号</label>
+				</view>
+			</view>
+			<!-- 固定底部按钮，用了组件 -->
+			<view class="btn-box">
+				<button class="bottom-button" disabled="{{btn_is_disabled}}" formType="submit">立即提交订单</button>
+			</view>
+		</form>
+	</view>
+</view>

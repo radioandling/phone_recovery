@@ -1,0 +1,71 @@
+.container{
+  background-color: #fff;
+}
+/* top部分css */
+.top{
+  padding: 60rpx 100rpx 0rpx;
+  box-sizing: border-box;
+  text-align: center;
+}
+.top-success{
+  color: #e64340;
+  font-size: 18px;
+}
+.top-contact{
+  margin-top: 15rpx;
+  color: #80848f;
+  font-size: 13px;
+}
+.button-box{
+  margin-top: 20rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.button-item{
+  width: 230rpx;
+  height: 60rpx;
+  color: #e64340;
+  background-color: #fff;
+  border: 1px solid #e64340;
+  border-radius: 5rpx;
+  font-size: 14px;
+  line-height: 60rpx;
+  font-weight: 350;
+}
+.red-button{
+  background-color: #e64340;
+  color: #fff;
+}
+/* middle部分css */
+.middle{
+  margin-top: 40rpx;
+}
+.middle-box{
+  width: 80%;
+  padding: 40rpx 30rpx;
+  box-sizing: border-box;
+  margin: 0 auto;
+  background-color: #f0f0f3;
+  border-top: 2px dashed #80848f;
+  font-size: 12px;
+  color: #80848f;
+}
+/* bottom部分css */
+.bottom{
+  margin-top: 40rpx;
+}
+.bottom-box{
+  width: 80%;
+  height: 110rpx;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  font-size: 12px;
+  color: #80848f;
+}
+.bottom-box-detail{
+  color: #e64340;
+}

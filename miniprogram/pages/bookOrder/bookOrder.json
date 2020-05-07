@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "回收下单",
+  "usingComponents": {
+    "i-icon": "../../dist/icon/index",
+    "i-button": "../../dist/button/index",
+    "bottom-button": "../../components/bottomButton/bottomButton"
+  }
+}

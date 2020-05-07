@@ -1,0 +1,15 @@
+var PHONEHIDDEN = function (str) {
+  var str_ary = str.split('')
+  var new_ary = str_ary.map(function(item, idx) {
+    if (idx > 2 && idx < 7) {
+      return item = "*"
+    } else {
+      return item
+    }
+  })
+  return new_ary.join('')
+}
+
+module.exports = {
+  PHONEHIDDEN: PHONEHIDDEN
+}

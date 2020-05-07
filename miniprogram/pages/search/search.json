@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "机型搜索",
+  "usingComponents": {
+    "i-icon": "../../dist/icon/index"
+  }
+}

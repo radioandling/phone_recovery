@@ -1,0 +1,51 @@
+<wxs module="filters" src="./filters.wxs"></wxs>
+<view class="container">
+	<view wx:if="{{address_exsit}}">
+		<block wx:for="{{address_list}}" wx:key="_id">
+			<!-- 地址盒 -->
+			<view class="address-box" bindtap="back_to_bookOrder" data-tag="{{item.user_tag}}">
+				<view class="address-box-left">
+					<view class="left-top content-text">
+						<text class="left-top-item item-name">{{item.user_name}}</text>
+						<text class="left-top-item item-phone">{{item.user_show_phone ? filters.PHONEHIDDEN(item.user_phone) : item.user_phone}}</text>
+						<text class="left-default left-top-item" wx:if="{{item.user_default}}">默认</text>
+					</view>
+					<view class="left-bottom sub-text">
+						{{item.user_region[0] + item.user_region[1] + item.user_region[2]}}{{item.user_detail_address}}
+					</view>
+				</view>
+				<view class="address-box-right">
+					<i-icon
+						type="browse"
+						size="18"
+						style="display: {{item.user_show_phone ? 'inline' : 'none'}}"
+						catchtap="on_show_hidden_number"
+						data-index="{{index}}"
+						data-userShowPhone="{{item.user_show_phone}}"
+					/>
+					<i-icon 
+						type="browse_fill"
+						size="18"
+						style="display: {{item.user_show_phone ? 'none' : 'inline'}}"
+						catchtap="on_show_hidden_number"
+						data-index="{{index}}"
+						data-userShowPhone="{{item.user_show_phone}}"
+					/>
+					<text class="right-gap">|</text>
+					<i-icon type="brush" size="18" catchtap="on_to_addAddress" data-showDelete="true"  data-tag="{{item.user_tag}}"/>
+				</view>
+			</view>
+		</block>
+	</view>
+	<view class="address-not-exsit" wx:else>
+		<view class="address-info">
+			<i-icon type="warning_fill" size="30" />
+			<text>一个地址都没有哦~</text>
+		</view>
+	</view>
+</view>
+<!-- 固定底部按钮，用了组件 -->
+<view class="btn-box">
+	<button class="bottom-button" bindtap="on_to_addAddress">新建地址</button>
+</view>
+

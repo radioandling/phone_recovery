@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "下单成功",
+  "usingComponents": {
+    "i-icon": "../../dist/icon/index"
+  }
+}

@@ -1,0 +1,185 @@
+.container-choices{
+  width: 100%;
+  background-color: #eeeef1;
+}
+.scroll-box{
+  padding-bottom: 120rpx;
+}
+/* 头部信息部分 */
+.info{
+  margin: 0 auto;
+  padding: 20rpx 0;
+  background-color: #fff;
+  border-bottom: 1rpx solid transparent;
+}
+.info-box{
+  width: 90%;
+  height: 300rpx;
+  margin: 0 auto;
+  background-color: #fcd6d6;
+  border-radius: 10rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.info-box-choices{
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-color: #FFF;
+}
+.choices-item{
+  width: 50%;
+  height: 50rpx;
+  font-size: 12px;
+}
+.info-box-image{
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 50%;
+  background-color: #fff;
+}
+.info-box-intro{
+  width: 300rpx;
+  height: 300rpx;
+  padding: 60rpx 0;
+  box-sizing: border-box;
+}
+.intro-title{
+  font-size: 16px;
+  margin-bottom: 20rpx;
+}
+.intro-price{
+  font-size: 12px;
+  color: #e64340;
+  margin-bottom: 20rpx;
+}
+.price-tag{
+  font-size: 18px;
+  font-weight: 500;
+}
+.intro-forecast{
+  color: #80848f;
+  font-size: 12px;
+}
+.info-box-cheaper{
+  width: 150rpx;
+  height: 300rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.cheaper-btn{
+  width: 150rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  border: 1px solid #e6716f;
+  font-size: 10px;
+  text-align: center;
+  border-radius: 8rpx;
+  color: #e22623;
+}
+.info-box-detail{
+  width: 90%;
+  height: 100rpx;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+}
+/* 地址信息部分 */
+.address{
+  height: 150rpx;
+  margin: 20rpx 0 0;
+  background-color: #fff;
+  border-bottom: 3px dashed darkgray;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.address-add{
+  height: 40rpx;
+  color: #80848f;
+  font-size: 14px;
+}
+.address-show{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  color: #80848f;
+  font-weight: 350;
+}
+/* 回收方式部分 */
+.methods{
+  height: 180rpx;
+  margin: 20rpx 0 0;
+  padding: 20rpx 30rpx;
+  box-sizing: border-box;
+  background-color: #Fff;
+}
+.methods-box-wrapper{
+  height: 80rpx;
+  position: relative;
+  font-size: 14px;
+}
+.methods-box{
+  width: 400rpx;
+  height: 60rpx;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+/* 身份证信息部分 */
+.idcard{
+  width: 90%;
+  height: 100rpx;
+  margin: 20rpx auto;
+  padding: 0 20rpx;
+  background-color: #fff;
+  border-radius: 5rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+}
+.idcard > input {
+  color: #80848f;
+  margin-left: 20rpx;
+}
+
+/* 协议同意部分 */
+.protocol{
+  height: 140rpx;
+  margin: 20rpx 0 0;
+  padding: 0rpx 30rpx;
+  position: relative;
+  background-color: #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+}
+.protocol{
+  font-size: 12px;
+  color: #80848f;
+  font-weight: 300;
+}
+.protocol-box > switch{
+  transform: scale(0.8);
+}

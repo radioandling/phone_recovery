@@ -1,0 +1,10 @@
+<view class="btn-box">
+		<button 
+			class="{{isDisabled ? 'btn-disabled' : 'btn-unDisabled'}}"
+			formType="{{btnType}}"
+			disabled="{{isDisabled}}"
+			bindtap="on_tap"
+		>
+		{{btnText}}
+		</button>
+</view>
